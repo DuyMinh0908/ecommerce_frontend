@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vku.daduyminh">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DADuyMinh"
+        android:requestLegacyExternalStorage="true"
+        android:preserveLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".views.LoginActivity"
+            android:exported="true"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name=".views.AllLaptopsActivity"
+            android:label="@string/all_laptops"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity
+            android:name=".views.AllMobilesActivity"
+            android:label="@string/all_mobiles"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity
+            android:name=".views.CartActivity"
+            android:label="@string/cart"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity android:name=".views.ShippingAddressActivity" />
+        <activity
+            android:name=".views.DetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".views.AllMobilesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.AllMobilesActivity" />
+        </activity>
+        <activity
+            android:name=".views.WishListActivity"
+            android:label="@string/my_wishList"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity
+            android:name=".views.CategoryActivity"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity
+            android:name=".views.NewsFeedActivity"
+            android:label="@string/news_feed"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity android:name=".views.OrderProductActivity"
+            android:theme="@style/OrderProductTheme"/>
+
+        <activity
+            android:name=".views.OrdersActivity"
+            android:label="@string/orders"
+            android:parentActivityName=".views.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ProductActivity" />
+        </activity>
+        <activity
+            android:name=".views.AllReviewsActivity"
+            android:label="@string/reviews"
+            android:parentActivityName=".views.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.DetailsActivity" />
+        </activity>
+        <activity android:name=".views.SearchActivity" android:theme="@style/noAnimTheme" />
+        <activity android:name=".views.ResultActivity"/>
+        <activity
+            android:name=".views.StatusActivity"
+            android:label="@string/status"
+            android:parentActivityName=".views.OrdersActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.OrdersActivity" />
+        </activity>
+        <activity
+            android:name=".views.WriteReviewActivity"
+            android:label="@string/write_review"
+            android:parentActivityName=".views.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.DetailsActivity" />
+        </activity>
+        <activity
+            android:name=".views.ProductActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <receiver android:name=".receiver.NetworkChangeReceiver" />
+
+    </application>
+
+</manifest>
