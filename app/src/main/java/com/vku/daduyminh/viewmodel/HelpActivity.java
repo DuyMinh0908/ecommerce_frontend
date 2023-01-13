@@ -1,5 +1,4 @@
-package com.vku.daduyminh.views;
-
+package com.vku.daduyminh.viewmodel;
 
 import android.os.Bundle;
 

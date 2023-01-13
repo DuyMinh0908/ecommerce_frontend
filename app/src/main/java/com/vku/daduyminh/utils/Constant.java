@@ -3,8 +3,8 @@ public class Constant {
 
     private Constant(){}
 
-    public static final String LOCALHOST = "http://192.168.1.13:3000/";
-    public static final String LOCALHOST_IMG_PROCESS = "http://192.168.1.13:5000/";
+    public static final String LOCALHOST = "http://192.168.130.192:3000/";
+    public static final String LOCALHOST_IMG_PROCESS = "http://192.168.130.192:5000/";
 
     // Constant Variables
     public static final String PRODUCT = "product";

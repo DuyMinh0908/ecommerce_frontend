@@ -455,9 +455,9 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(cartIntent);
                 return true;
             case R.id.action_addProduct:
-//                Intent addProductIntent = new Intent(this, AddProductActivity.class);
-//                startActivity(addProductIntent);
-//                return true;
+                Intent addProductIntent = new Intent(this, AddProductActivity.class);
+                startActivity(addProductIntent);
+                return true;
             default: return super.onOptionsItemSelected(item);
         }
     }
@@ -487,8 +487,8 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
             Intent orderIntent = new Intent(this, OrdersActivity.class);
             startActivity(orderIntent);
         } else if (id == R.id.nav_myAccount) {
-//            Intent accountIntent = new Intent(this, AccountActivity.class);
-//            startActivity(accountIntent);
+            Intent accountIntent = new Intent(this, AccountActivity.class);
+            startActivity(accountIntent);
         } else if (id == R.id.nav_newsFeed) {
             Intent newsFeedIntent = new Intent(this, NewsFeedActivity.class);
             startActivity(newsFeedIntent);
